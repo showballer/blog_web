@@ -1,0 +1,116 @@
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.main {
+  display: block;
+}
+
+.preview {
+  display: block;
+}
+
+.preview .previewImage {
+  position: relative;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+  //   background-image: var(--background-image);
+  background-image: url('/images/theme/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  & .previewOverlay {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: -100vw;
+    z-index: 50;
+    // filter: drop-shadow(var(--color-background) 100 vw 0 px);
+    & .previewWaves {
+      position: relative;
+      width: 100%;
+      height: 15vh;
+      min-height: 100px;
+      max-height: 150px;
+      margin-bottom: -7px;
+      & .previewParallax > use {
+        animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+        &:nth-child(1) {
+          animation-duration: 7s;
+          animation-delay: -2s;
+        }
+        &:nth-child(2) {
+          animation-duration: 10s;
+          animation-delay: -3s;
+        }
+        &:nth-child(3) {
+          animation-duration: 13s;
+          animation-delay: -4s;
+        }
+        &:nth-child(4) {
+          animation-duration: 20s;
+          animation-delay: -5s;
+        }
+      }
+    }
+  }
+}
+
+.preview .previewMottoWrapper {
+  position: absolute;
+  top: 42vh;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  text-align: center;
+  & .previewMotto {
+    display: inline;
+    margin: 0;
+    color: #fff;
+    font-weight: 300;
+    font-size: 3.5em;
+    font-family: 'Quicksand', 'Vollkorn', serif;
+    text-align: center;
+  }
+  & .previewCursor {
+    color: #fff;
+    font-size: 2.5em;
+    animation: blink 0.7s infinite;
+  }
+}
+.preview .previewScroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  & > a {
+    color: #33333d;
+    &:hover {
+      color: #ff3b00;
+    }
+  }
+}
