@@ -33,6 +33,36 @@ ol {
   list-style: none;
 }
 
+.contentItem {
+  overflow: hidden;
+  border: 1px solid #ebedf0;
+  border-radius: 4px;
+  &.queue-anim-entering,
+  &.queue-anim-leaving {
+    transition: none !important;
+  }
+  img {
+    display: block;
+  }
+}
+
+.resetSkeleton {
+  width: 100%;
+  height: 80%;
+  div {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .ant-skeleton-element {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.rc-autoresponsive {
+  transition: height 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
 @media (max-width: @screen-xs) {
   .ant-table {
     width: 100%;

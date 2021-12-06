@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: yuanyun
+ * @Date: 2021-11-19 08:39:44
+ * @LastEditors: yuanyun
+ * @LastEditTime: 2021-11-24 13:54:50
+ */
 declare module 'slash2';
 declare module '*.css';
 declare module '*.less';
@@ -16,6 +24,7 @@ declare module '@antv/data-set';
 declare module 'mockjs';
 declare module 'react-fittext';
 declare module 'bizcharts-plugin-slider';
+declare module 'rc-tween-one/lib/ticker';
 
 // preview.pro.ant.design only do not use in your production ;
 // preview.pro.ant.design Dedicated environment variable, please do not use it in your project.

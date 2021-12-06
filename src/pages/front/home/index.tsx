@@ -4,10 +4,10 @@
  * @Author: yuanyun
  * @Date: 2021-11-19 09:59:56
  * @LastEditors: yuanyun
- * @LastEditTime: 2021-11-23 17:49:49
+ * @LastEditTime: 2021-11-24 13:15:28
  */
 import React from 'react'
-import { Card } from 'antd'
+import Content from './components/Content'
 import styles from './index.less'
 
 const Home: React.FC<any> = () => {
@@ -40,7 +40,7 @@ const Home: React.FC<any> = () => {
                 </div>
             </div>
             <div id="container" className={styles.container}>
-                <Card>123</Card>
+                <Content />
             </div>
         </div>
     )

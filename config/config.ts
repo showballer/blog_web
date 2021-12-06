@@ -40,6 +40,11 @@ export default defineConfig({
       component: './front/home'
     },
     {
+      path: '/md',
+      layout: false,
+      component: './front/md'
+    },
+    {
       path: '/user',
       layout: false,
       routes: [
